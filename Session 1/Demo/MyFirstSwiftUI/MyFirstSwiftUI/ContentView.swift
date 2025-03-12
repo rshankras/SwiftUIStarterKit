@@ -12,7 +12,13 @@ struct ContentView: View {
     @State private var inputText = ""
     var body: some View {
         ZStack {
-            Color.secondary.ignoresSafeArea(.all)
+            Image(systemName: "swift")
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(.gray)
+                .opacity(0.8)
+                .ignoresSafeArea(.all)
+           Color.secondary.ignoresSafeArea(.all)
             VStack (spacing:40) {
                 TextField("Enter your text", text: $inputText)
                     .padding(20)
